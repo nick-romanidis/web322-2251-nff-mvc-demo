@@ -13,6 +13,7 @@ const app = express();
 app.use(express.urlencoded({ extended: false }));
 
 // Set up EJS
+app.set('views', path.join(__dirname, '/views'));
 app.set('view engine', 'ejs');
 app.set('layout', 'layouts/main');
 app.use(expressLayouts);
